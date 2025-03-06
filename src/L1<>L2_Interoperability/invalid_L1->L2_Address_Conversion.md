@@ -1,0 +1,2 @@
+## Invalid L1 -> L2 Address Conversion 
+In Starknet, addresses are of the `felt` type, while on L1 addresses are of the `uint160` type. To pass address types during cross-layer messaging, the address variable is typically given as a `uint256`. We have to compare the `felt252`(size of address on the L2) size must be greater than the size on the L1 chain . So there is no problem iin address conversion.
